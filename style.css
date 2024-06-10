@@ -8,13 +8,19 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background:linear-gradient(to left,rgba(125, 5, 161, 0.704),rgb(124, 236, 223));
+    background:darkblue;
+}
+.container h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .container{
-    background-color: rgba(255, 255, 255, 0.214);
+    background-color: rgba(255, 255, 255, 0.904);
     padding: 2rem;
     border-radius: 1rem;
     min-height: 45vh;
+   
 }
 form{
     margin: 2rem 0 1rem 0;
@@ -35,6 +41,7 @@ form input{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
     margin: 50px 0px 40px 0px;
 }
 .select-container{
@@ -46,14 +53,9 @@ form input{
 img{
     max-width: 50px;
 }
-.dropdown i{
-    font-size: 1.5rem;
-    margin-top: 1rem;
-}
 .select-container select{
     font-size: 1rem;
-    width: auto;
-    padding: 3px 0 3px 0;
+    padding: 6px 0 6px 0;
 }
 .msg{
     display: flex;
@@ -67,21 +69,65 @@ form button{
     height: 3rem;
     font-size: 1.1rem;
     border-radius: 1.5rem;
-    background-color: rgb(255, 0, 132);
+    background-color: darkblue;
     color: white;
     cursor: pointer;   
 }
+.swap {
+    background-color: white;
+    color: darkblue;
+    width: max-content;
+    border-radius: 50%; 
+    padding: 1rem 1rem 2rem 1rem; 
+    margin-top: 10px;
+    border: 1px solid lightgray;
+}
+.swap:hover{
+    background-color: darkblue;
+    color: white;
+}
 
-
-@media (max-width: 768px) {
-    .container h1{
-        font-size: 1.8rem;
-    }
+/* For smaller screens */
+@media screen and (max-width: 600px) {
     .container {
-        padding: 1.5rem;
+        padding: 1rem;
+        width: 80%;
     }
-    .select-container img {
-        width: 40px;
-        height: 40px;
+    .amount{
+        width: auto;
+    }
+    .amount input {
+        font-size: 0.9rem;
+        line-height: 2rem;
+    }
+    .dropdown {
+        margin: 30px 0px 20px 0px;
+    }
+    .msg {
+        font-size: 16px;
+    }
+    form button {
+        font-size: 1rem;
     }
 }
+
+/* For very small screens */
+@media screen and (max-width: 320px) {
+    .container {
+        width: 85%;
+        padding: 0.3rem;
+    }
+    .amount input {
+        width: 95%;
+        font-size: 0.7rem;
+        line-height: 1.6rem;
+    }
+    .msg {
+        font-size: 12px;
+    }
+    form button {
+        font-size: 0.8rem;
+    }
+}
+
+
